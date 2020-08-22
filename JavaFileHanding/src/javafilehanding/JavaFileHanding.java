@@ -29,6 +29,13 @@ public class JavaFileHanding {
     /**
      * @param args the command line arguments
      */
+
+    public static void main(String[] args) {
+        String FileName = "filename.csv";
+        String Contenido = "contenido";
+        String Salida = Constructor(FileName, Contenido);
+        Imprimir(Salida);
+    }
     
     private static String Constructor(String FileName, String Contenido) {
         String CreaArchivo = CreateFile(FileName);
@@ -40,13 +47,6 @@ public class JavaFileHanding {
                            Lectura +"\n\n"+
                            Borrado;
         return Salida;
-    }
-    
-    public static void main(String[] args) {
-        String FileName = "filename.csv";
-        String Contenido = "contenido";
-        String Salida = Constructor(FileName, Contenido);
-        Imprimir(Salida);
     }
     
     private static void Imprimir(String Contenido) {
